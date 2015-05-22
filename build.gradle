@@ -1,2 +1,8 @@
+import com.xebialabs.gradle.plugins.release.CreateMaintenanceEnvironmentTask
+
 apply plugin: 'groovy'
 apply plugin: 'release-plugin'
+
+project.tasks.create("createMaintenanceEnvironment", CreateMaintenanceEnvironmentTask).configure {
+    branchName = "maintenance"
+}
